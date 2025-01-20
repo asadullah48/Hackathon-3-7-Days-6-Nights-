@@ -4,12 +4,12 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="px-4 sm:px-6 md:px-12 lg:px-28 py-11 w-full font-[poppins] select-none">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 py-12">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 py-12">
         {/* Address Section */}
         <div className="text-gray-400 text-sm font-light mt-8 sm:mt-24 mr-0 sm:mr-8">
           <p>
             400 University Drive Suite 200 Coral <br />
-            Gables, <br />
+            spaGables, <br />
             FL 33134 USA
           </p>
         </div>
@@ -19,16 +19,16 @@ const Footer = () => {
           <ul className="space-y-4 sm:space-y-9">
             <li className="text-gray-400">Link</li>
             <li>
-              <Link href="/">Home</Link>
+              <Link href={"/"}>Home</Link>
             </li>
             <li>
-              <Link href="/">Shop</Link>
+              <Link href={"/"}>Shop</Link>
             </li>
             <li>
-              <Link href="/">About</Link>
+              <Link href={"/"}>About</Link>
             </li>
             <li>
-              <Link href="/">Contact</Link>
+              <Link href={"/"}>Contact</Link>
             </li>
           </ul>
         </div>
@@ -38,13 +38,13 @@ const Footer = () => {
           <ul className="space-y-4 sm:space-y-9">
             <span className="text-gray-400">Help</span>
             <li>
-              <Link href="/">Payment Options</Link>
+              <Link href={"/"}>Payment Options</Link>
             </li>
             <li>
-              <Link href="/">Returns</Link>
+              <Link href={"/"}>Returns</Link>
             </li>
             <li>
-              <Link href="/">Privacy Policies</Link>
+              <Link href={"/"}>Privacy Policies</Link>
             </li>
           </ul>
         </div>
@@ -72,7 +72,7 @@ const Footer = () => {
       <div className="border-b-[1.5px] border-gray-300 mt-5"></div>
 
       {/* Footer Bottom Text */}
-      <p className="text-sm text-gray-800 mt-4">
+      <p className=" text-sm text-gray-800  mt-4">
         2022 Meuble House. All rights reserved.
       </p>
     </footer>

@@ -55,7 +55,7 @@ const Blog = () => {
         </h5>
       </div>
 
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-8 md:px-12 lg:px-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-8 md:px-12 lg:px-16">
         {blog.map((list, index) => (
           <div
             key={index}
@@ -75,10 +75,11 @@ const Blog = () => {
               <h3 className="text-[16px] font-light font-[poppins] text-gray-700">
                 {list.name}
               </h3>
-              <Link href={list.url}
-                 className="text-[18px] text-center font-medium text-black font-[poppins] border-b-2  border-black hover:text-gray-500 hover:border-gray-500 transition duration-300">
-                  Read More about {list.name}
-                
+              <Link
+                href={list.url}
+                className="text-[18px] text-center font-medium text-black font-[poppins] border-b-2  border-black hover:text-gray-500 hover:border-gray-500 transition duration-300"
+              >
+                Read More
               </Link>
 
               <div className="flex justify-between items-center text-gray-500 text-[14px]">
@@ -96,10 +97,11 @@ const Blog = () => {
         ))}
       </div>
       <div className="flex flex-col items-center mt-8">
-        <Link href="/"
-           className="text-[20px] font-medium font-[poppins] text-center text-black border-b-2 border-black hover:text-gray-500 hover:border-gray-500 transition duration-300">
-            View All
-          <
+        <Link
+          href="/"
+          className="text-[20px] font-medium font-[poppins] text-center text-black border-b-2 border-black hover:text-gray-500 hover:border-gray-500 transition duration-300"
+        >
+          View All
         </Link>
       </div>
     </section>
