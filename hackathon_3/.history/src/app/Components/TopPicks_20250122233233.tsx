@@ -95,7 +95,7 @@ const sanityData: datatype[] = await client.fetch(query)
             className="flex flex-col items-start cursor-pointer bg-white p-4 sm:p-6 w-[200px] sm:w-[250px] h-[300px] sm:h-[350px]"
           >
             <Image
-              src={urlFor(Picks.image).url()}
+              src={urlFor}
               alt={Picks.name}
               width={200}
               height={200}

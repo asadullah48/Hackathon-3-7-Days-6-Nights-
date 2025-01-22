@@ -1,35 +1,14 @@
-import { client } from "@/sanity/lib/client";
-import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const TopPicks = async () => {
+const TopPicks = () => {
   interface TopPick2 {
     name: string;
     image: string;
     price: number;
     text: string;
   }
-  interface datatype {
-    id: string,
-    image: string,
-    discountPercentage: number,
-    isFeaturedProduct: boolean,
-    color: string,
-    brand: string,
-    weight: string,
-    material: string,
-    name: string,
-    price: number,
-    description: string, 
-    category: string,
-    dimensions: string,
-    ratings: number,
-    reviews: string[],
-    tags: string[],
-    stockLevel: number,
-    }
   const topPicks: TopPick2[] = [
     {
       name: "Trenton modular sofa_3",
@@ -56,29 +35,7 @@ const TopPicks = async () => {
       text: "mt-20",
     },
   ];
-  const query = `*[_type == "product"] { 
-
-id,
- name,
-image, 
-price,
-description,
-discountPercentage,
-isFeaturedProduct,
-stockLevel,
-category,
-brand,
-dimensions,
-weight,
-color,
-ratings,
-reviews,
-tags, 
-material
-}`;
-const sanityData: datatype[] = await client.fetch(query)
-// console.log(toppicks)
-
+  const query
   return (
     <section className="px-4 sm:px-8 md:px-12 lg:px-16 py-8 select-none">
       <h1 className="font-medium text-[24px] sm:text-[36px] font-[poppins] text-center">
@@ -89,13 +46,13 @@ const sanityData: datatype[] = await client.fetch(query)
         suspension, floor, and table flight
       </p>
       <div className="flex flex-wrap justify-center gap-6 mt-8">
-        {sanityData.map((Picks, index) => (
+        {topPicks.map((Picks, index) => (
           <div
             key={index}
             className="flex flex-col items-start cursor-pointer bg-white p-4 sm:p-6 w-[200px] sm:w-[250px] h-[300px] sm:h-[350px]"
           >
             <Image
-              src={urlFor(Picks.image).url()}
+              src={Picks.image}
               alt={Picks.name}
               width={200}
               height={200}
@@ -105,7 +62,7 @@ const sanityData: datatype[] = await client.fetch(query)
             />
 
             <div
-              className={`text-black text-[14px] sm:text-[16px] font-normal font-[poppins] ${Picks.description}`}
+              className={`text-black text-[14px] sm:text-[16px] font-normal font-[poppins] ${Picks.text}`}
             >
               {Picks.name}
             </div>

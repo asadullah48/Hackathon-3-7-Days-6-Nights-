@@ -1,5 +1,4 @@
 import { client } from "@/sanity/lib/client";
-import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -89,13 +88,13 @@ const sanityData: datatype[] = await client.fetch(query)
         suspension, floor, and table flight
       </p>
       <div className="flex flex-wrap justify-center gap-6 mt-8">
-        {sanityData.map((Picks, index) => (
+        {topPicks.map((Picks, index) => (
           <div
             key={index}
             className="flex flex-col items-start cursor-pointer bg-white p-4 sm:p-6 w-[200px] sm:w-[250px] h-[300px] sm:h-[350px]"
           >
             <Image
-              src={urlFor(Picks.image).url()}
+              src={Picks.image}
               alt={Picks.name}
               width={200}
               height={200}
@@ -105,7 +104,7 @@ const sanityData: datatype[] = await client.fetch(query)
             />
 
             <div
-              className={`text-black text-[14px] sm:text-[16px] font-normal font-[poppins] ${Picks.description}`}
+              className={`text-black text-[14px] sm:text-[16px] font-normal font-[poppins] ${Picks.text}`}
             >
               {Picks.name}
             </div>
