@@ -5,7 +5,12 @@ import Link from "next/link";
 import React from "react";
 
 const TopPicks = async () => {
-  
+  interface TopPick2 {
+    name: string;
+    image: string;
+    price: number;
+    text: string;
+  }
   interface datatype {
     id: string,
     image: string,
