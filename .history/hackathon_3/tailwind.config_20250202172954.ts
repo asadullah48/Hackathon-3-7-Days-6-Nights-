@@ -7,18 +7,17 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {
-    extend: {
-      colors: {
-        primary: "#FBEBB5",
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+  module.exports = {
+    theme: {
+      extend: {
+        fontFamily: {
+          Poppins: ["Poppins", "sans-serif"],
+        },
+        colors: {
+          primary: "#FBEBB5",
+        },
       },
-      fontFamily: {
-        Poppins: ["Poppins", "sans-serif"],
-        title: ["poppins"],
-      }
     },
-  },
+  };
   plugins: [],
 } satisfies Config;
