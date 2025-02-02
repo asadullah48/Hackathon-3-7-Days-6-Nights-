@@ -36,7 +36,7 @@ const blog: BlogList[] = [
   },
 ];
 
-const BlogCard = ({ name, url, time, date, img }: BlogList) => {
+const BlogCard = ({ name, url, time, date, img }) => {
   return (
     <article className="bg-white hover:shadow-md transition-transform ease-in-out hover:scale-105 duration-500 rounded-md overflow-hidden flex flex-col">
       <Image
